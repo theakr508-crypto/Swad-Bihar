@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swad Bihar - Royal Indian Cuisine & Online Ordering</title>
+  <meta name="description" content="Experience the authentic royal taste of Hyderabadi and Lucknowi Dum Biriyanis at Swad Bihar. Order online for fast delivery or reserve a table today.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Boxicons for Modern Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <i class="bx bxs-crown logo-icon"></i>
+        <span class="logo-text">Swad <span class="accent">Bihar</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#about" class="nav-link">Our Story</a></li>
+          <li><a href="#reservations" class="nav-link">Book a Table</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchBtn" class="action-btn" aria-label="Search">
+          <i class="bx bx-search"></i>
+        </button>
+        <button id="cartBtn" class="action-btn cart-toggle" aria-label="View Cart">
+          <i class="bx bx-shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button id="mobileMenuBtn" class="action-btn mobile-toggle" aria-label="Toggle Menu">
+          <i class="bx bx-menu-alt-right"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search Bar overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+      <input type="text" id="menuSearchInput" placeholder="Search for your favorite biriyani, starters, desserts...">
+      <button class="close-search" id="closeSearchBtn"><i class="bx bx-x"></i></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="bx bxs-award"></i> The Royal Taste of Traditions</span>
+          <h1 class="hero-title">A Symphony of <br><span class="accent-glow">Saffron & Spice</span></h1>
+          <p class="hero-desc">Indulge in authentic, slow-cooked Dum Biriyani prepared with premium Basmati rice, hand-ground spices, and pure Desi Ghee. Passed down through royal generations.</p>
+          <div class="hero-actions-group">
+            <a href="#menu" class="btn btn-primary btn-lg">Order Online <i class="bx bx-right-arrow-alt"></i></a>
+            <a href="#reservations" class="btn btn-outline btn-lg">Reserve a Table</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">4.9<i class="bx bxs-star accent"></i></span>
+              <span class="stat-label">15k+ Reviews</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">30<span class="accent">Min</span></span>
+              <span class="stat-label">Express Delivery</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Halal & Fresh</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <img src="assets/hero_biriyani.png" alt="Royal Dum Biriyani" class="hero-image floating-anim">
+            <div class="glow-ring"></div>
+            <!-- Floating Food Badges -->
+            <div class="floating-badge badge-1">
+              <i class="bx bxs-hot"></i>
+              <div>
+                <h4>Royal Spice</h4>
+                <p>Authentic Dum</p>
+              </div>
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="bx bxs-heart"></i>
+              <div>
+                <h4>Pure Ghee</h4>
+                <p>Rich Flavor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container grid-4">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bx bx-bowl-hot"></i></div>
+          <h3>Traditional Dum Cooking</h3>
+          <p>Slow cooked under charcoal seals in moisture and unlocks the full depth of rich spices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bx bx-leaf"></i></div>
+          <h3>Select Premium Grains</h3>
+          <p>We use aged extra-long grain Basmati rice for that perfectly fluffy, aromatic experience.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bx bx-medal"></i></div>
+          <h3>Secret Royal Spices</h3>
+          <p>Signature spice blends freshly ground in-house according to ancestral Nizami recipes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="bx bx-time-five"></i></div>
+          <h3>Express Delivery</h3>
+          <p>Hot, fresh, and steaming biriyani delivered right to your doorstep within 30 minutes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Explore Our Feast</span>
+          <h2 class="section-title">The Royal Menu</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <!-- Menu Filter Controls -->
+        <div class="menu-controls">
+          <div class="categories-tabs" id="menuTabs">
+            <button class="tab-btn active" data-category="all">All Dishes</button>
+            <button class="tab-btn" data-category="biriyani">Signature Biriyanis</button>
+            <button class="tab-btn" data-category="starters">Starters & Kebabs</button>
+            <button class="tab-btn" data-category="dessert">Sweet Indulgence</button>
+            <button class="tab-btn" data-category="beverages">Refreshing Drinks</button>
+          </div>
+          
+          <div class="inline-search">
+            <i class="bx bx-search search-icon-inline"></i>
+            <input type="text" id="inlineSearchInput" placeholder="Quick search dishes...">
+          </div>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Dynamically populated cards will go here -->
+          <div class="loader-placeholder">Loading our specialities...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container grid-2">
+        <div class="about-visual">
+          <div class="about-img-container">
+            <img src="assets/hyderabadi_biriyani.png" alt="Aged spices and cooking process" class="about-img">
+            <div class="experience-badge">
+              <span class="years">25+</span>
+              <span class="years-label">Years of Culinary Royalty</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="sub-title">Our Legacy</span>
+          <h2 class="section-title">A Tradition Born in Royal Kitchens</h2>
+          <p>At Swad Bihar, we do not just cook; we preserve a legacy. Our recipes trace back to the royal kitchens of the Nawabs, where the art of Dum cooking was perfected over centuries.</p>
+          <p>Every handi of biriyani is sealed hermetically with dough (Dum process) and slow-cooked over wood charcoal embers. This allows the juices of marinated meats, saffron, and aromatic herbs to infuse perfectly into each individual grain of rice.</p>
+          
+          <ul class="about-checklist">
+            <li><i class="bx bx-check-circle"></i> Pure, high-grade saffron imported from Kashmir</li>
+            <li><i class="bx bx-check-circle"></i> Hand-slaughtered Halal meats marinated for 12 hours</li>
+            <li><i class="bx bx-check-circle"></i> No artificial colors, preservatives, or MSG</li>
+          </ul>
+          
+          <a href="#reservations" class="btn btn-primary">Book a Royal Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-title">Patron Feedback</span>
+          <h2 class="section-title">Word from Swad Bihar</h2>
+          <div class="heading-line"></div>
+        </div>
+
+        <div class="reviews-carousel-wrapper">
+          <div class="reviews-carousel" id="reviewsCarousel">
+            <!-- Review 1 -->
+            <div class="review-card active">
+              <div class="rating-stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+              <p class="review-text">"Absolutely the best Hyderabadi Dum Biriyani I've had outside of Hyderabad. The rice is aromatic, the meat is incredibly tender and slide-off-the-bone. The delivery was fast and the packaging kept it piping hot!"</p>
+              <div class="reviewer-info">
+                <h4>Aditya Sharma</h4>
+                <span>Food Critic & Blogger</span>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-card">
+              <div class="rating-stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star-half"></i>
+              </div>
+              <p class="review-text">"The Royal Seekh Kebabs are melt-in-the-mouth, and their Biriyani is a masterclass in spice balancing. It's flavorful without being excessively oily or burning. Highly recommended for family dinners."</p>
+              <div class="reviewer-info">
+                <h4>Priya Nair</h4>
+                <span>Loyal Customer</span>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-card">
+              <div class="rating-stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+              <p class="review-text">"Their catering made our corporate celebration a grand success. Everyone raved about the Lucknowi Dum Biriyani and the Gulab Jamuns. Flawless service and supreme quality."</p>
+              <div class="reviewer-info">
+                <h4>Rohan Malhotra</h4>
+                <span>Director, TechCorp</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Reservations Section -->
+    <section id="reservations" class="reservation-section">
+      <div class="reservation-bg-glow"></div>
+      <div class="container grid-2">
+        <div class="res-info-side">
+          <span class="sub-title">Dine With Us</span>
+          <h2 class="section-title">Secure a Royal Table</h2>
+          <p>Skip the wait and experience the royal hospitality in our heritage-themed dining halls. Perfect for family gatherings, celebrations, or intimate dinners.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-item">
+              <i class="bx bx-phone-call"></i>
+              <div>
+                <h4>Reservation Desk</h4>
+                <p>+91 98765 43210 / +91 22 4567 8901</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bx-envelope"></i>
+              <div>
+                <h4>Inquiries</h4>
+                <p>royal@swadbihar.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bx-time"></i>
+              <div>
+                <h4>Dining Hours</h4>
+                <p>Lunch: 12:00 PM - 4:00 PM <br>Dinner: 7:00 PM - 11:30 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="res-form-side">
+          <div class="form-container-glass">
+            <h3>Online Reservation</h3>
+            <form id="tableReservationForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="resName">Full Name</label>
+                  <input type="text" id="resName" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <label for="resPhone">Phone Number</label>
+                  <input type="tel" id="resPhone" required placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                  <label for="resGuests">Number of Guests</label>
+                  <select id="resGuests" required>
+                    <option value="2">2 People</option>
+                    <option value="4" selected>4 People</option>
+                    <option value="6">6 People</option>
+                    <option value="8">8 People</option>
+                    <option value="10">10+ People (Party)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="resDate">Select Date</label>
+                  <input type="date" id="resDate" required>
+                </div>
+                <div class="form-group">
+                  <label for="resTime">Select Time Slot</label>
+                  <select id="resTime" required>
+                    <option value="12:30 PM">12:30 PM (Lunch)</option>
+                    <option value="1:30 PM">1:30 PM (Lunch)</option>
+                    <option value="2:30 PM">2:30 PM (Lunch)</option>
+                    <option value="7:30 PM" selected>7:30 PM (Dinner)</option>
+                    <option value="8:30 PM">8:30 PM (Dinner)</option>
+                    <option value="9:30 PM">9:30 PM (Dinner)</option>
+                    <option value="10:30 PM">10:30 PM (Dinner)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="resOccasion">Occasion (Optional)</label>
+                  <select id="resOccasion">
+                    <option value="">None</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Business">Business Dinner</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group margin-top-lg">
+                <label for="resNotes">Special Requests (Optional)</label>
+                <textarea id="resNotes" placeholder="E.g., High chair needed, wheelchair accessible, quiet corner..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Book Table</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <a href="#" class="logo">
+            <i class="bx bxs-crown logo-icon"></i>
+            <span class="logo-text">Swad <span class="accent">Bihar</span></span>
+          </a>
+          <p>Preserving ancestral Nizami culinary traditions. Experience slow-cooked authenticity in every grain of rice.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#about">Our Legacy</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Our Specialties</h3>
+          <ul>
+            <li><a href="#menu">Royal Hyderabadi Dum Biriyani</a></li>
+            <li><a href="#menu">Kolkata Special Dum Biriyani</a></li>
+            <li><a href="#menu">Awadhi Mutton Biriyani</a></li>
+            <li><a href="#menu">Tandoori Seekh Kebabs</a></li>
+            <li><a href="#menu">Double ka Meetha</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col contact-col">
+          <h3>Contact Info</h3>
+          <p><i class="bx bx-map"></i> 102, Royal Heritage Plaza, MG Road, Mumbai, India</p>
+          <p><i class="bx bx-phone"></i> +91 98765 43210</p>
+          <p><i class="bx bx-envelope"></i> dining@swadbihar.com</p>
+          <p><i class="bx bx-calendar"></i> Open Daily: 11:30 AM - 11:30 PM</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Swad Bihar. All Rights Reserved. Crafted for food lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Sidebar -->
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="bx bx-shopping-bag"></i> Your Basket</h3>
+      <button class="close-cart-btn" id="closeCartBtn"><i class="bx bx-x"></i></button>
+    </div>
+    
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- Dynamically filled with items -->
+      <div class="empty-cart-view">
+        <i class="bx bx-shopping-bag empty-cart-icon"></i>
+        <p>Your basket is empty.</p>
+        <p class="empty-subtext">Add flavorful delights from our menu to start your order!</p>
+        <a href="#menu" class="btn btn-outline close-cart-link">Browse Menu</a>
+      </div>
+    </div>
+    
+    <div class="cart-footer" id="cartFooter">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotalVal">₹0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>GST & Restaurant Charges (5%)</span>
+        <span id="taxVal">₹0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Delivery Fee</span>
+        <span id="deliveryVal">₹40.00</span>
+      </div>
+      <div class="summary-row total-row">
+        <span>Grand Total</span>
+        <span id="grandTotalVal">₹0.00</span>
+      </div>
+      
+      <button class="btn btn-primary btn-full checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- Customization Modal -->
+  <div class="modal-overlay" id="customModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modalItemName">Customize Item</h3>
+        <button class="close-modal" id="closeCustomModal"><i class="bx bx-x"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-item-info">
+          <p id="modalItemDesc"></p>
+          <span class="price-tag" id="modalItemPrice">₹0.00</span>
+        </div>
+        
+        <form id="customizationForm">
+          <input type="hidden" id="modalItemId">
+          
+          <!-- Spice Level Selection -->
+          <div class="custom-section">
+            <h4 class="custom-title">Spice Level</h4>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="spiceLevel" value="Mild" checked>
+                <span class="option-details">
+                  <span class="option-name">Mild</span>
+                  <span class="option-desc">Gentle warmth</span>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="spiceLevel" value="Medium">
+                <span class="option-details">
+                  <span class="option-name">Medium</span>
+                  <span class="option-desc">Classic Indian heat</span>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="spiceLevel" value="Royal Spicy">
+                <span class="option-details">
+                  <span class="option-name">Royal Spicy <i class="bx bxs-hot accent"></i></span>
+                  <span class="option-desc">Nizami fire</span>
+                </span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Size Selection -->
+          <div class="custom-section">
+            <h4 class="custom-title">Portion Size</h4>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="portionSize" value="Regular" data-price-mod="0" checked>
+                <span class="option-details">
+                  <span class="option-name">Regular</span>
+                  <span class="option-desc">Serves 1 person</span>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="portionSize" value="Family Feast" data-price-mod="250">
+                <span class="option-details">
+                  <span class="option-name">Family Feast (+₹250)</span>
+                  <span class="option-desc">Serves 3-4 people</span>
+                </span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Addons -->
+          <div class="custom-section">
+            <h4 class="custom-title">Add Extra Delight (Optional)</h4>
+            <div class="addons-list">
+              <label class="addon-item">
+                <input type="checkbox" name="addons" value="Double Egg" data-price="20">
+                <span class="checkbox-custom"></span>
+                <span class="addon-name">Boiled Egg (+₹20)</span>
+              </label>
+              <label class="addon-item">
+                <input type="checkbox" name="addons" value="Extra Salan" data-price="15">
+                <span class="checkbox-custom"></span>
+                <span class="addon-name">Extra Mirchi ka Salan (+₹15)</span>
+              </label>
+              <label class="addon-item">
+                <input type="checkbox" name="addons" value="Garlic Raita" data-price="25">
+                <span class="checkbox-custom"></span>
+                <span class="addon-name">Special Garlic Raita (+₹25)</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-full">Add to Basket</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout & Live Order Tracker Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-card checkout-modal-card">
+      <button class="close-modal" id="closeCheckoutModal"><i class="bx bx-x"></i></button>
+      
+      <!-- Checkout Wizard Navigation -->
+      <div class="checkout-steps" id="checkoutStepsIndicator">
+        <div class="step active" id="indicatorStep1">
+          <span class="step-num">1</span>
+          <span class="step-txt">Delivery</span>
+        </div>
+        <div class="step" id="indicatorStep2">
+          <span class="step-num">2</span>
+          <span class="step-txt">Payment</span>
+        </div>
+        <div class="step" id="indicatorStep3">
+          <span class="step-num">3</span>
+          <span class="step-txt">Tracking</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Address Details -->
+      <div class="checkout-step-content active" id="checkoutStep1">
+        <h3>Delivery Details</h3>
+        <form id="deliveryForm">
+          <div class="form-group margin-bottom-md">
+            <label for="delName">Full Name</label>
+            <input type="text" id="delName" required placeholder="E.g. Aarav Mehta">
+          </div>
+          <div class="form-group margin-bottom-md">
+            <label for="delPhone">Phone Number</label>
+            <input type="tel" id="delPhone" required placeholder="10-digit mobile number">
+          </div>
+          <div class="form-group margin-bottom-md">
+            <label for="delAddress">Delivery Address</label>
+            <textarea id="delAddress" required placeholder="Flat, Building, Street, Area, Landmark..."></textarea>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="delPincode">Pincode</label>
+              <input type="text" id="delPincode" required placeholder="400001">
+            </div>
+            <div class="form-group">
+              <label for="delType">Address Tag</label>
+              <select id="delType">
+                <option value="Home">Home</option>
+                <option value="Office">Office/Work</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full margin-top-lg">Proceed to Payment</button>
+        </form>
+      </div>
+
+      <!-- Step 2: Payment Details -->
+      <div class="checkout-step-content" id="checkoutStep2">
+        <h3>Choose Payment Method</h3>
+        <form id="paymentForm">
+          <!-- Payment Options Toggles -->
+          <div class="payment-options margin-bottom-lg">
+            <label class="pay-option active">
+              <input type="radio" name="payMethod" value="Card" checked>
+              <i class="bx bx-credit-card"></i>
+              <span>Credit/Debit Card</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payMethod" value="UPI">
+              <i class="bx bx-mobile-alt"></i>
+              <span>UPI / QR</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payMethod" value="COD">
+              <i class="bx bx-money"></i>
+              <span>Cash on Delivery</span>
+            </label>
+          </div>
+
+          <!-- Card Inputs Panel -->
+          <div class="payment-panel active" id="cardPaymentPanel">
+            <div class="form-group margin-bottom-md">
+              <label for="cardNum">Card Number</label>
+              <input type="text" id="cardNum" placeholder="4111 2222 3333 4444" maxlength="19">
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cardExpiry">Expiry Date</label>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label for="cardCvv">CVV</label>
+                <input type="password" id="cardCvv" placeholder="123" maxlength="3">
+              </div>
+            </div>
+          </div>
+
+          <!-- UPI Panel -->
+          <div class="payment-panel" id="upiPaymentPanel">
+            <p class="panel-info-text">Scan the QR code or enter your UPI ID to make a payment.</p>
+            <div class="form-group">
+              <label for="upiId">UPI ID (VPA)</label>
+              <input type="text" id="upiId" placeholder="username@upi">
+            </div>
+          </div>
+
+          <!-- COD Panel -->
+          <div class="payment-panel" id="codPaymentPanel">
+            <p class="panel-info-text"><i class="bx bx-info-circle"></i> Please keep exact change ready. A delivery agent will collect ₹<span class="cod-amount-placeholder">0.00</span> in cash at your doorstep.</p>
+          </div>
+
+          <div class="checkout-pricing-summary margin-top-lg margin-bottom-md">
+            <div class="summary-line">
+              <span>Total Payable</span>
+              <span id="payableVal" class="accent">₹0.00</span>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <button type="button" class="btn btn-outline" id="backToDeliveryBtn">Back</button>
+            <button type="submit" class="btn btn-primary" id="placeOrderBtn">Place Order</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 3: Order Success & Live Tracker -->
+      <div class="checkout-step-content" id="checkoutStep3">
+        <div class="order-success-header text-center">
+          <div class="success-icon"><i class="bx bx-check-circle animate-pop"></i></div>
+          <h2>Royal Feast Confirmed!</h2>
+          <p>Order ID: <span id="lblOrderId" class="bold font-outfit">#DB-84920</span></p>
+          <p class="est-delivery-text">Estimated Delivery in <span class="accent bold" id="deliveryTimeCounter">29:45</span></p>
+        </div>
+
+        <!-- Live Status Timeline -->
+        <div class="order-timeline">
+          <div class="timeline-step active" id="timelineStep1">
+            <div class="step-marker"><i class="bx bx-receipt"></i></div>
+            <div class="step-info">
+              <h4>Order Received</h4>
+              <p>The kitchen is reviewing your selection.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-step" id="timelineStep2">
+            <div class="step-marker"><i class="bx bx-bowl-hot"></i></div>
+            <div class="step-info">
+              <h4>Cooking Authentically</h4>
+              <p>Our Nizami Chefs are slow-cooking your Dum Biriyani.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step" id="timelineStep3">
+            <div class="step-marker"><i class="bx bx-cycling"></i></div>
+            <div class="step-info">
+              <h4>Out for Delivery</h4>
+              <p>Our royal courier is rushing to your palace.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step" id="timelineStep4">
+            <div class="step-marker"><i class="bx bx-home-heart"></i></div>
+            <div class="step-info">
+              <h4>Arrived & Feast Ready</h4>
+              <p>Hot, delicious meal delivered at your door.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to actions -->
+        <div class="order-success-footer margin-top-lg text-center">
+          <p class="contact-courier-text" id="courierPhoneContainer" style="display:none;">
+            <i class="bx bx-phone"></i> Delivery Partner: <strong>Karan Singh (+91 91234 56789)</strong>
+          </p>
+          <button class="btn btn-outline" id="btnBrowseMore">Back to Restaurant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Toasts for Notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
